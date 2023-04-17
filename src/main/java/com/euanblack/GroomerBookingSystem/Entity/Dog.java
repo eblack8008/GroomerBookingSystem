@@ -1,6 +1,7 @@
 package com.euanblack.GroomerBookingSystem.Entity;
 
 import com.euanblack.GroomerBookingSystem.Entity.Customer;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -21,6 +22,7 @@ public class Dog {
 
     @ManyToOne
     @JoinColumn(name = "ownerId")
+    @JsonIgnore
     private Customer customer;
 
     public Dog() {

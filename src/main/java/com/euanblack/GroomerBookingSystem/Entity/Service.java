@@ -1,5 +1,6 @@
 package com.euanblack.GroomerBookingSystem.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class Service {
     private double price;
 
     @OneToMany(mappedBy = "service")
+    @JsonIgnoreProperties("service")
     private List<BookingService> bookingServices = new ArrayList<>();
 
     public Service() {

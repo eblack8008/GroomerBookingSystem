@@ -1,5 +1,7 @@
 package com.euanblack.GroomerBookingSystem.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -14,12 +16,14 @@ public class Booking {
 
     @ManyToOne
     @JoinColumn(name = "custId")
+    @JsonIgnore
     private Customer customer;
 
     @Column(name = "notes")
     private String notes;
 
     @OneToMany(mappedBy = "booking")
+    @JsonIgnoreProperties("booking")
     private List<BookingService> bookingServices = new ArrayList<>();
 
     public Booking() {

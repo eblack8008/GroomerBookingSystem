@@ -1,5 +1,6 @@
 package com.euanblack.GroomerBookingSystem.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -11,10 +12,12 @@ public class BookingService {
 
     @ManyToOne
     @JoinColumn(name = "bookingId")
+    @JsonIgnore
     private Booking booking;
 
     @ManyToOne
     @JoinColumn(name = "serviceId")
+    @JsonIgnore
     private Service service;
 
     public BookingService() {
