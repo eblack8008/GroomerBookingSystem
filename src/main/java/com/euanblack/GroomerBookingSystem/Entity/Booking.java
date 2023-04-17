@@ -25,8 +25,8 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(Customer customer, String notes) {
-        this.customer = customer;
+    public Booking(String notes)
+    {
         this.notes = notes;
     }
 
@@ -36,14 +36,6 @@ public class Booking {
 
     public void setBookingId(int bookingId) {
         this.bookingId = bookingId;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
     }
 
     public String getNotes() {
@@ -62,6 +54,14 @@ public class Booking {
         this.bookingServices = bookingServices;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
     @Override
     public String toString() {
         return "Booking{" +
@@ -71,4 +71,5 @@ public class Booking {
                 ", bookingServices=" + bookingServices +
                 '}';
     }
+
 }
