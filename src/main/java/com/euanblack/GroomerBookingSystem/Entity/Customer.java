@@ -78,6 +78,22 @@ public class Customer {
         this.phoneNumber = phoneNumber;
     }
 
+    public List<Booking> getBooking() {
+        return booking;
+    }
+
+    public void setBooking(List<Booking> booking) {
+        this.booking = booking;
+    }
+
+    public List<Dog> getDog() {
+        return dog;
+    }
+
+    public void setDog(List<Dog> dog) {
+        this.dog = dog;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
