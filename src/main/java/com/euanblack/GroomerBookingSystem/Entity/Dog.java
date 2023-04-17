@@ -32,14 +32,6 @@ public class Dog {
         this.age = age;
     }
 
-    public int getId() {
-        return dogId;
-    }
-
-    public void setId(int id) {
-        this.dogId = dogId;
-    }
-
     public String getBreed() {
         return breed;
     }
@@ -62,6 +54,22 @@ public class Dog {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getDogId() {
+        return dogId;
+    }
+
+    public void setDogId(int dogId) {
+        this.dogId = dogId;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     @Override
