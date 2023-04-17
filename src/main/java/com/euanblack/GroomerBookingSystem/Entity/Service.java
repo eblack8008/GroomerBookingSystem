@@ -1,6 +1,5 @@
 package com.euanblack.GroomerBookingSystem.Entity;
 
-import com.euanblack.GroomerBookingSystem.Entity.BookingService;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -61,6 +60,7 @@ public class Service {
     public void setBookingServices(List<BookingService> bookingServices) {
         this.bookingServices = bookingServices;
     }
+
 
     @Override
     public String toString() {
