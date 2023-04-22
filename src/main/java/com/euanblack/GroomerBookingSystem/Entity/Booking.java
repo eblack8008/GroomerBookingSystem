@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +23,9 @@ public class Booking {
     @Column(name = "notes")
     private String notes;
 
+    @Column(name = "date")
+    private LocalDateTime date;
+
     @OneToMany(mappedBy = "booking")
     @JsonIgnoreProperties("booking")
     private List<BookingService> bookingServices = new ArrayList<>();
@@ -29,9 +33,9 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(String notes)
-    {
+    public Booking(String notes, LocalDateTime date) {
         this.notes = notes;
+        this.date = date;
     }
 
     public int getBookingId() {
